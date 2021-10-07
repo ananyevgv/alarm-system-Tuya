@@ -1,0 +1,52 @@
+alias: change_alarm_time
+trigger:
+  - platform: state
+    entity_id: input_number.alarm_time
+action:
+  - service: localtuya.set_dp
+    data:
+      device_id: XXXXXXXXXXXXXXXXXXXXXXX
+      dp: 3
+      value: '{{ states(''input_number.alarm_time'')| int }}'
+initial_state: true
+mode: single
+
+alias: change_delay_time_alarm
+trigger:
+  - platform: state
+    entity_id: input_number.delay_time_alarm
+action:
+  - service: localtuya.set_dp
+    data:
+      device_id: XXXXXXXXXXXXXXXXXXXXXXX
+      dp: 28
+      value: '{{ states(''input_number.delay_time_alarm'')| int }}'
+initial_state: true
+mode: single
+
+alias: change_exit_delay
+trigger:
+  - platform: state
+    entity_id: input_select.security_state
+action:
+  - service: localtuya.set_dp
+    data:
+      device_id: XXXXXXXXXXXXXXXXXXXXXXX
+      dp: 1
+      value: '{{ states(''input_select.security_state'') }}'
+initial_state: true
+mode: single
+
+alias: change_security_state
+trigger:
+  - platform: state
+    entity_id: input_number.delivery_delay_alarm
+action:
+  - service: localtuya.set_dp
+    data:
+      device_id: XXXXXXXXXXXXXXXXXXXXXXX
+      dp: 2
+      value: '{{ states(''input_number.delivery_delay_alarm'')| int }}'
+initial_state: true
+mode: single
+

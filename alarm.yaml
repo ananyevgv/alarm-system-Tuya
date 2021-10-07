@@ -1,0 +1,68 @@
+- host: 192.168.XX.XX
+  device_id: XXXXXXXXXXXXXXXXXXXXX
+  local_key: XXXXXXXXXXXXXXXXXXXXX
+  friendly_name: Alarm system
+  protocol_version: '3.3'
+  entities:
+   - platform: sensor
+     friendly_name: security_state
+     id: 1
+   - platform: sensor
+     friendly_name: delivery_delay_alarm
+     id: 2
+     unit_of_measurement: 'сек'
+   - platform: sensor
+     friendly_name: alarm_time
+     id: 3
+     unit_of_measurement: 'мин'
+   - platform: sensor
+     friendly_name: delay_time_alarm
+     id: 28
+     unit_of_measurement: 'сек'
+   - platform: sensor
+     friendly_name: sim card
+     id: 23
+   - platform: sensor
+     friendly_name: alarm_time
+     id: 3
+   - platform: binary_sensor
+     friendly_name: Power good
+     id: 15
+
+     
+   - platform: sensor
+     friendly_name: alarm_1
+     id: 25
+   - platform: sensor
+     friendly_name: alarm_2
+     id: 33
+
+     
+   - platform: switch
+     friendly_name: relay_input
+     id: 4
+   - platform: switch
+     friendly_name: double_door_sensor
+     id: 6
+   - platform: switch
+     friendly_name: setting_removing_sound
+     id: 10
+     
+   - platform: switch
+     friendly_name: sms_notification
+     id: 11
+   - platform: switch
+     friendly_name: siren
+     id: 12
+   - platform: switch
+     friendly_name:  voice_messages
+     id: 13
+   - platform: switch
+     friendly_name: warning_V
+     id: 17
+   - platform: switch
+     friendly_name: alarm_calls
+     id: 20
+   - platform: switch
+     friendly_name: alarm_sms_messages
+     id: 21

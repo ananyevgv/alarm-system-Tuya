@@ -1,0 +1,36 @@
+localtuya: !alarm.yaml
+
+input_select:               
+    security_state:
+        name: Режим сигнализации
+        options:
+          - disarmed
+          - home
+          - arm
+          - sos
+        initial: disarmed
+        icon: mdi:shield-account
+        
+input_number:
+      delivery_delay_alarm:
+        name: Время задержки постановки
+        initial: 30
+        min: 0
+        max: 299
+        step: 1
+        unit_of_measurement: 'сек'
+      delay_time_alarm:
+        name: Время задержки тревоги
+        initial: 30
+        min: 0
+        max: 299
+        step: 1
+        unit_of_measurement: 'сек'
+        
+      alarm_time:
+        name: Время тревоги
+        initial: 3
+        min: 1
+        max: 59
+        step: 1
+        unit_of_measurement: 'мин'
