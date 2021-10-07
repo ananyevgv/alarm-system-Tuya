@@ -1,0 +1,8 @@
+type: entities
+entities:
+  - entity: input_number.alarm_time
+  - entity: input_number.delay_time_alarm
+  - entity: input_number.delivery_delay_alarm
+  - entity: input_select.security_state
+  - entity: binary_sensor.power_good
+state_color: false
